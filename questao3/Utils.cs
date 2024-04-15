@@ -12,11 +12,22 @@ namespace questao3
                 {
                     Console.WriteLine($"\n{pergunta}");
                     check = char.TryParse(Console.ReadLine(), out response);
+                    if (response != 'n' && response != 's')
+                    {
+                        do
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;                            
+                            Console.WriteLine("O valor inserido é invalido, favor inserir (s) para fazer um novo calculo ou (n) sair do sistema: ");
+                            Console.ResetColor();
+                            check = char.TryParse(Console.ReadLine(), out response);                            
+                        } while (response != 'n' && response != 's');
+
+                    };
                 }
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("O valor inserido é invalido, favor inserir um numero inteiro: ");
+                    Console.WriteLine("O valor inserido é invalido, favor inserir um número inteiro: ");
                     Console.ResetColor();
                     check = char.TryParse(Console.ReadLine(), out response);
                 }
@@ -24,6 +35,7 @@ namespace questao3
             } while (!check);
             return response;
         }
+
 
         public static int PerguntaInt(string pergunta)
         {
