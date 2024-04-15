@@ -1,8 +1,8 @@
-namespace questao1
+namespace exercicio1
 {
     public class Calc
     {
-        public static int ConvertIdadeEmDias(int dias,int meses,int anos){
+        public static int ConvertIdadeEmDias(int anos,int meses,int dias){
             int anosEmDias = anos*365;
             int mesesEmDias= meses*30;
 
