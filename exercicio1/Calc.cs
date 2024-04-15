@@ -10,14 +10,6 @@ namespace exercicio1
             return anosEmDias + mesesEmDias + dias;
         }
 
-        public static void BarraCarregamento(string texto, int quantidadePontinhos, int tempo)
-        {
-            PeR.ExibeMensagem(texto);
-            for (int i = 0; i <= quantidadePontinhos; i++)
-            {
-                PeR.ExibeMensagem(".");
-                Thread.Sleep(tempo);
-            }
-        }
+        
     }
 }
